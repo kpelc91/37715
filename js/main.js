@@ -10,12 +10,15 @@ $(document).ready(function () {
 
     $('body').append(newSquare);
 
-    $('#button-main').click(function() {
+    $('#button-main').click(function () {
         $('#square').animate(
             { marginLeft: '100px', height: '100px', width: '100px' }, 3000
-            )
+        )
         $('#square').animate(
-            {'backgroundColor': 'blue'}, 5000
-            )
+            { 'backgroundColor': 'blue' }, 5000, function () {
+                $(this).prepend('Animacja zakończona')
+            }
+        );
+
     });
 });
