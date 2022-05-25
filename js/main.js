@@ -16,7 +16,7 @@ $(document).ready(function () {
         )
         $('#square').animate(
             { 'backgroundColor': 'blue' }, 5000, function () {
-                $(this).prepend('Animacja zakończona')
+                $(this).prepend("<h2>Animacja zakończona</h2>")
             }
         );
 
